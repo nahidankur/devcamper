@@ -9,7 +9,6 @@ exports.getbootcamps = async (req, res, next) => {
     } catch (err) {
         res.status(400).json({ success : false })
     }
-    res.status(200).json({ success: true, msg: "Show all bootcamps" })
 }
 
 
@@ -61,10 +60,6 @@ exports.updatebootcamp = async (req, res, next) => {
     }
     
 }
-
-
-
-
 exports.deletebootcamp = async (req, res, next) => {
     try {
         const bootcamp = await Bootcamp.findByIdAndDelete(req.params.id)
